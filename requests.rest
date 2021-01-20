@@ -1,0 +1,35 @@
+### Criar turma
+POST http://localhost:3003/mission/create
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Dumont",
+    "start_date": "2020-01-01",
+    "end_date": "2021-01-01",
+    "module": 4
+}
+
+### Criar aluno
+POST http://localhost:3003/student/create
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Noh Ah Jeong",
+    "email": "nohah@email.com",
+    "birthdate": "1992-10-30",
+    "mission_id": 1
+}
+
+### Criar professor
+POST http://localhost:3003/teacher/create
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "João Alves",
+    "email": "joaoalves@email.com",
+    "birthdate": "1990-01-01",
+    "mission_id": 1
+}

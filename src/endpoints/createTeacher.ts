@@ -1,9 +1,9 @@
 import { Request, Response } from 'express'
-import { insertStudent } from "../data/insertStudent"
+import { insertTeacher } from '../data/insertTeacher'
 
-export const createStudent = async (req: Request, res: Response): Promise<void> => {
+export const createTeacher = async (req: Request, res: Response): Promise<void> => {
     try {
-        await insertStudent(
+        await insertTeacher(
             req.body.id,
             req.body.name,
             req.body.email,
@@ -11,7 +11,7 @@ export const createStudent = async (req: Request, res: Response): Promise<void> 
             req.body.mission_id
         );
 
-        res.status(200).send(`Estudante ${req.body.name} criado`);
+        res.status(200).send(`Professor ${req.body.name} criado`);
     } catch (error) {
         res.status(400).send(error.message);
     }
