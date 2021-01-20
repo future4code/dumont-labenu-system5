@@ -3,11 +3,11 @@ POST http://localhost:3003/mission/create
 Content-Type: application/json
 
 {
-    "id": 1,
-    "name": "Dumont",
-    "start_date": "2020-01-01",
-    "end_date": "2021-01-01",
-    "module": 4
+    "id": 2,
+    "name": "Mello",
+    "start_date": "2021-03-03",
+    "end_date": "2022-03-03",
+    "module": 1
 }
 
 ### Criar aluno
@@ -22,14 +22,19 @@ Content-Type: application/json
     "mission_id": 1
 }
 
+
+
 ### Criar professor
 POST http://localhost:3003/teacher/create
 Content-Type: application/json
 
 {
-    "id": 1,
-    "name": "João Alves",
-    "email": "joaoalves@email.com",
-    "birthdate": "1990-01-01",
+    "id":2,
+    "name": "Matheus Gesualdo",
+    "email": "matheusgesualdo@email.com",
+    "birthdate": "1993-04-03",
     "mission_id": 1
 }
+
+### Pegar aluno por id
+GET http://localhost:3003/student/1
