@@ -6,6 +6,7 @@ import dotenv from 'dotenv'
 import { createStudent } from './endpoints/createStudent'
 import { createMission } from './endpoints/createMission'
 import { createTeacher } from './endpoints/createTeacher'
+import { getStudentAge } from './endpoints/getStudentAge'
 
 const app = express();
 
@@ -25,10 +26,11 @@ export const connection = knex({
   }
 });
 
-// endponts
+// endpoints
 app.post("/mission/create", createMission);
 app.post("/student/create", createStudent);
 app.post("/teacher/create", createTeacher);
+app.get("/student/:id", getStudentAge);
 
 const server = app.listen(process.env.PORT || 3003, () => {
   if (server) {
