@@ -4,6 +4,7 @@ import express, { raw, Request, Response } from 'express'
   import knex, { QueryBuilder } from 'knex' 
   import dotenv from 'dotenv' 
 import { createStudent } from './endpoints/createStudent'
+import {createMission} from "./endpoints/createMission"
   
   const app = express(); 
   
@@ -26,6 +27,7 @@ import { createStudent } from './endpoints/createStudent'
 //   endipont
 
 app.post("/student/create", createStudent);
+app.post("/mission/create", createMission);
 
 
    const server = app.listen(process.env.PORT || 3003, () => { 
