@@ -11,8 +11,8 @@ export const createMission = async (req: Request, res: Response): Promise<void> 
         await insertMission(
             req.body.id,
             req.body.name,
-            new Date(req.body.dateOfStart),
-            new Date(req.body.dateOfEnd),
+            req.body.start_date,
+            req.body.end_date,
             req.body.module
         );
 

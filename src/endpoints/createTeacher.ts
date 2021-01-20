@@ -7,7 +7,7 @@ export const createTeacher = async (req: Request, res: Response): Promise<void> 
             req.body.id,
             req.body.name,
             req.body.email,
-            new Date(req.body.dateOfBirth),
+            req.body.birthdate,
             req.body.mission_id
         );
 
