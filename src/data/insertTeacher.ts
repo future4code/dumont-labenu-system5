@@ -1,6 +1,6 @@
 import { connection } from "../index"
 
-export const insertStudent = async (
+export const insertTeacher = async (
     id: number,
     name: string,
     email: string,
@@ -8,7 +8,7 @@ export const insertStudent = async (
     mission_id: number
 ): Promise<void> => {
     await connection.raw(`
-        INSERT INTO student (id, name, email, birthdate, mission_id)
+        INSERT INTO teacher (id, name, email, birthdate, mission_id)
         VALUES (${id}, "${name}", "${email}", "${dateOfBirth}", ${mission_id});
     `)
 };
