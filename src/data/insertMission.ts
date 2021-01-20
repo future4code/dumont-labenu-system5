@@ -1,19 +1,14 @@
-import {connection} from "../index"
+import { connection } from "../index"
 
-export default async function insertMission (
+export const insertMission = async (
     id: number,
     name: string,
     start_date: Date,
-    end_date:Date,
-    module: number,
-    ): Promise <void> {
-        await connection.raw(`
-            INSERT INTO student VALUES (
-                ${id},
-                "${name}" ,
-                "${start_date}",
-                "${end_date}",
-                ${module},
-            );
-        `);
+    end_date: Date,
+    module: number
+): Promise<void> => {
+    await connection.raw(`
+        INSERT INTO mission (id, name, start_date, end_date, module)
+        VALUES (${id}, "${name}", "${start_date}", "${end_date}", ${module});
+    `)
 };
