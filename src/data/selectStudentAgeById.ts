@@ -1,8 +1,6 @@
 import { connection } from "../index"
 
-export const selectStudentById = async ( id: number
-    
-): Promise<any> => {
+export const selectStudentAgeById = async (id: number): Promise<any> => {
     const result = await connection.raw(`
         SELECT name, FLOOR(DATEDIFF(CURDATE(), birthdate)/365) AS age
         FROM student

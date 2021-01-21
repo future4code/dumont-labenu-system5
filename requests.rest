@@ -3,10 +3,10 @@ POST http://localhost:3003/mission/create
 Content-Type: application/json
 
 {
-    "id": 2,
-    "name": "Mello",
-    "start_date": "2021-03-03",
-    "end_date": "2022-03-03",
+    "id": 10,
+    "name": "Escolinha do professor Girafales",
+    "start_date": "1978-03-03",
+    "end_date": "1979-03-03",
     "module": 1
 }
 
@@ -15,11 +15,11 @@ POST http://localhost:3003/student/create
 Content-Type: application/json
 
 {
-    "id": 1,
-    "name": "Noh Ah Jeong",
-    "email": "nohah@email.com",
-    "birthdate": "1992-10-30",
-    "mission_id": 1
+    "id": 15,
+    "name": "Chiquinha",
+    "email": "chiquinha@email.com",
+    "birthdate": "1950-12-22",
+    "mission_id": 10
 }
 
 ### Criar professor
@@ -27,12 +27,15 @@ POST http://localhost:3003/teacher/create
 Content-Type: application/json
 
 {
-    "id":2,
-    "name": "Matheus Gesualdo",
-    "email": "matheusgesualdo@email.com",
-    "birthdate": "1993-04-03",
-    "mission_id": 1
+    "id":10,
+    "name": "Professor Girafales",
+    "email": "girafales@email.com",
+    "birthdate": "1934-06-15",
+    "mission_id": 10
 }
 
-### Pegar aluno por id
-GET http://localhost:3003/student/2
+### Pegar idade do aluno por id
+GET http://localhost:3003/student/15
+
+### Pegar alunos por turma
+GET http://localhost:3003/test/escolinha do professor girafales
