@@ -5,9 +5,10 @@ export const selectStudentById = async ( id: number
 ): Promise<any> => {
 
     const result = await connection.raw(`
-        SELECT * FROM student 
-        WHERE id = "${id}";
-    `);
+    SELECT name, FLOOR(DATEDIFF(CURDATE(), birthdate)/365) AS age
+    FROM Student
+    WHERE id = "${id}";
+`);
     return result[0];
 };
 
