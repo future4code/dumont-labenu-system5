@@ -1,15 +1,14 @@
 import { Request, Response } from 'express'
-import { selectStudentById } from '../data/selectStudentById'
+import { selectStudentAgeById } from '../data/selectStudentAgeById'
 
-export const getStudentAge = async (req: Request, res: Response): Promise<any> => {
+export const getStudentAgeById = async (req: Request, res: Response): Promise<any> => {
     try {
         const id = Number(req.params.id);
 
-        const student = await selectStudentById(id);
+        const student = await selectStudentAgeById(id);
 
         res.status(200).send(student);
     } catch (error) {
         res.status(400).send(error.message);
     }
-
 }
