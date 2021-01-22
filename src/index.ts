@@ -8,6 +8,7 @@ import { createMission } from './endpoints/createMission'
 import { createTeacher } from './endpoints/createTeacher'
 import { getStudentAgeById } from './endpoints/getStudentAgeById'
 import { getStudentsByMission } from './endpoints/getStudentsByMission'
+import { getStudentsByHobby } from './endpoints/getStudentsByHobby'
 
 const app = express();
 
@@ -32,7 +33,11 @@ app.post("/mission/create", createMission);
 app.post("/student/create", createStudent);
 app.post("/teacher/create", createTeacher);
 app.get("/student/:id", getStudentAgeById);
-app.get("/test/:mission", getStudentsByMission);
+
+// endpoints desafios
+app.get("/students/mission", getStudentsByMission);
+
+app.get("/students/hobby", getStudentsByHobby);
 
 const server = app.listen(process.env.PORT || 3003, () => {
   if (server) {
