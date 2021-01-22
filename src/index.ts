@@ -9,6 +9,8 @@ import { createTeacher } from './endpoints/createTeacher'
 import { getStudentAgeById } from './endpoints/getStudentAgeById'
 import { getStudentsByMission } from './endpoints/getStudentsByMission'
 import { getStudentsByHobby } from './endpoints/getStudentsByHobby'
+import { setStudentMission } from './endpoints/setStudentMission'
+import { setTeacherMission } from './endpoints/setTeacherMission'
 
 const app = express();
 
@@ -32,6 +34,8 @@ export const connection = knex({
 app.post("/mission/create", createMission);
 app.post("/student/create", createStudent);
 app.post("/teacher/create", createTeacher);
+app.post("/student/change", setStudentMission);
+app.post("/teacher/change", setTeacherMission);
 app.get("/student/:id", getStudentAgeById);
 
 // endpoints desafios

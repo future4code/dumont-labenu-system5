@@ -43,4 +43,8 @@
 ### Pegar alunos por hobby
     GET http://localhost:3003/students/hobby?hobby=Chamar o professor de Mestre Linguiça
 
-### 
+### Adicionar estudante na turma
+    POST http://localhost:3003/student/change?missionId=10&studentId=16
+
+### Adicionar professor na turma
+    POST http://localhost:3003/teacher/change?missionId=10&teacherId=11
