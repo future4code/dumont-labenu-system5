@@ -30,7 +30,7 @@ export const connection = knex({
   }
 });
 
-// endpoints
+// Endpoints das funcionalidades básicas
 app.post("/mission/create", createMission);
 app.post("/student/create", createStudent);
 app.post("/teacher/create", createTeacher);
@@ -38,7 +38,7 @@ app.post("/student/change", setStudentMission);
 app.post("/teacher/change", setTeacherMission);
 app.get("/student/:id", getStudentAgeById);
 
-// endpoints desafios
+// Endpoints dos desafios
 app.get("/students/mission", getStudentsByMission);
 
 app.get("/students/hobby", getStudentsByHobby);
