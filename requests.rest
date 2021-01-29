@@ -1,0 +1,50 @@
+### Criar turma
+    POST http://localhost:3003/mission/create
+    Content-Type: application/json
+
+    {
+        "id": 10,
+        "name": "Escolinha do professor Girafales",
+        "start_date": "1978-03-03",
+        "end_date": "1979-03-03",
+        "module": 1
+    }
+
+### Criar aluno
+    POST http://localhost:3003/student/create
+    Content-Type: application/json
+
+    {
+        "id": 15,
+        "name": "Chiquinha",
+        "email": "chiquinha@email.com",
+        "birthdate": "1950-12-22",
+        "mission_id": 10
+    }
+
+### Criar professor
+    POST http://localhost:3003/teacher/create
+    Content-Type: application/json
+
+    {
+        "id":10,
+        "name": "Professor Girafales",
+        "email": "girafales@email.com",
+        "birthdate": "1934-06-15",
+        "mission_id": 10
+    }
+
+### Pegar idade do aluno por id
+    GET http://localhost:3003/student/1
+
+### Pegar alunos por turma
+    GET http://localhost:3003/students/mission?mission=escolinha do professor girafales
+
+### Pegar alunos por hobby
+    GET http://localhost:3003/students/hobby?hobby=Chamar o professor de Mestre Linguiça
+
+### Adicionar estudante na turma
+    POST http://localhost:3003/student/change?missionId=10&studentId=16
+
+### Adicionar professor na turma
+    POST http://localhost:3003/teacher/change?missionId=10&teacherId=11
